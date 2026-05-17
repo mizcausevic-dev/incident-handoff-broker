@@ -38,7 +38,7 @@ flowchart LR
   F --> G
 ```
 
-Additional detail lives in [docs/architecture.md](/C:/Users/chaus/dev/repos/incident-handoff-broker/docs/architecture.md).
+Additional detail lives in [docs/architecture.md](./docs/architecture.md).
 
 ## API
 
@@ -101,9 +101,9 @@ Example payload:
 ## Local Run
 
 ```powershell
-Set-Location "C:\Users\chaus\dev\repos\incident-handoff-broker"
-$env:ERLANG_HOME = "C:\Users\chaus\dev\toolchains\otp_win64_28.5"
-$env:Path = "C:\Users\chaus\dev\toolchains\otp_win64_28.5\bin;C:\Users\chaus\dev\toolchains\elixir-otp-28\bin;$env:Path"
+cd incident-handoff-broker
+$env:ERLANG_HOME = "<path-to-erlang>"
+$env:Path = "$env:ERLANG_HOME\\bin;<path-to-elixir>;$env:Path"
 mix deps.get
 mix run --no-halt
 ```
@@ -116,9 +116,9 @@ Then open:
 ## Validation
 
 ```powershell
-Set-Location "C:\Users\chaus\dev\repos\incident-handoff-broker"
-$env:ERLANG_HOME = "C:\Users\chaus\dev\toolchains\otp_win64_28.5"
-$env:Path = "C:\Users\chaus\dev\toolchains\otp_win64_28.5\bin;C:\Users\chaus\dev\toolchains\elixir-otp-28\bin;$env:Path"
+cd incident-handoff-broker
+$env:ERLANG_HOME = "<path-to-erlang>"
+$env:Path = "$env:ERLANG_HOME\\bin;<path-to-elixir>;$env:Path"
 mix test
 ```
 
